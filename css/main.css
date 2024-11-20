@@ -1,0 +1,54 @@
+.container p span {
+  color: blue;
+  font-weight: bold;
+}
+
+.operation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.operation .form-floating {
+  width: 20%;
+}
+
+.form-control {
+  outline: none;
+  border: none;
+  border-bottom: solid black 1px;
+  border-radius: 0;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: black;
+  border-width: 2px;
+}
+
+#total::before {
+  content: "Total: ";
+}
+
+.w-48 {
+  width: 48%;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+table tr {
+  border-bottom: solid 1px black;
+  border-top: solid 1px black;
+}
+
+table tr > * {
+  padding: 5px;
+}
+
+table th {
+  text-transform: uppercase;
+}

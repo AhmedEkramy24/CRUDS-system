@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDS system</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-1">CRUDS system</h1>
+      <p class="text-center mb-2">
+        <span>C</span>reat <span>R</span>ead <span>U</span>pdate
+        <span>D</span>elete <span>S</span>earch
+      </p>
+      <div class="inputs my-3">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            placeholder="title"
+          />
+          <label for="price">Name</label>
+        </div>
+        <div class="operation">
+          <div class="form-floating mb-3">
+            <input
+              type="number"
+              class="form-control"
+              id="price"
+              placeholder="price"
+            />
+            <label for="price">Price</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="number"
+              class="form-control"
+              id="taxes"
+              placeholder="taxes"
+            />
+            <label for="price">Taxes</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="number"
+              class="form-control"
+              id="ads"
+              placeholder="ads"
+            />
+            <label for="price">ADS</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="number"
+              class="form-control"
+              id="discount"
+              placeholder="discount"
+            />
+            <label for="price">Discount</label>
+          </div>
+          <small class="bg-danger text-white p-2 fw-bold" id="total"></small>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="category"
+            placeholder="category"
+            list="cat"
+          />
+          <label for="price">Category</label>
+          <datalist id="cat">
+            <option>laptop</option>
+            <option>mobile</option>
+            <option>tv</option>
+            <option>pc</option>
+          </datalist>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="number"
+            class="form-control"
+            id="count"
+            placeholder="count"
+          />
+          <label for="price">Count</label>
+        </div>
+        <button class="btn btn-primary d-block w-100 fw-bold" id="create">
+          Create Product
+        </button>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="search"
+            placeholder="search"
+            oninput="searchProducts(this.value)"
+          />
+          <label for="price">Search</label>
+        </div>
+        <div class="search d-flex justify-content-between" id="search">
+          <button
+            class="btn btn-info w-48"
+            onclick="getSearchValue(this.id)"
+            id="by-title"
+          >
+            Search By Title
+          </button>
+          <button
+            class="btn btn-info w-48"
+            onclick="getSearchValue(this.id)"
+            id="by-cat"
+          >
+            Search By Category
+          </button>
+        </div>
+        <div class="delAll"></div>
+      </div>
+
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>title</th>
+              <th>price</th>
+              <th>taxes</th>
+              <th>ads</th>
+              <th>discount</th>
+              <th>total</th>
+              <th>category</th>
+              <th>update</th>
+              <th>delete</th>
+            </tr>
+          </thead>
+          <tbody id="show"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
